@@ -5,7 +5,7 @@ FROM debian:latest
 MAINTAINER "Kirill Müller" <krlmlr+docker@mailbox.org>
 
 # Install packages
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install openssh-server sudo
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install openssh-server sudo python net-tools
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh

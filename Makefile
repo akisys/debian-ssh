@@ -1,7 +1,7 @@
 all: test
 
 PARENT_NAME=$(shell sed -r -n '/^FROM/ {s/^FROM +//;p}' Dockerfile)
-PROJECT=debian-ssh
+PROJECT=akisys/debian-ssh
 CONTAINER_NAME=$(PROJECT):$(shell git rev-parse --abbrev-ref HEAD | sed 's/master/latest/')
 PORT=2222
 DOCKER_USER=docker
